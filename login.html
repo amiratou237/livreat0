@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>LivrEat</title>
+    </head>
+    <body>
+
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo">LivrEat</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html#home" class="nav__link active-link">Acceuil</a></li>
+                        <li class="nav__item"><a href="index.html#about" class="nav__link">A propos</a></li>
+                        <li class="nav__item"><a href="index.html#menu" class="nav__link">Menu</a></li>
+                        <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="login.html" class="nav__link">Connexion</a></li>
+
+
+                        <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+        <main class="l-main">
+            <section class="login">
+                <!--formulaire de connexion-->
+                <form action="connexion.php" id="connexion-form" method="post">
+                    <h2 class="second-title">Connexion</h2>
+                    <label for="nom_utilisateur">Nom d'utilisateur: </label>
+                    <input type="text" name="nom_utilisateur" id="nom_utilisateur" required><br>
+                    <label for="mot_de_passe">Mot de passe: </label>
+                    <input type="password" name="mot_de_passe" id="mot_de_passe" required> <br>
+                    <button type="submit">Se connecter</button>
+                    <p>Nouveau ? <a href="#" class="active-link" id="login-link">Inscrivez-vous ici</a></p>
+                    <p>je suis un Admin ! <a href="admin/login.php" class="active-link" >ici</a></p>
+
+                </form>
+                <!--Formulaire d'incription-->
+                <form action="inscription.php" id="inscription-form" style="display: none;" method="post">
+                    <h2 class="second-title">Inscription</h2>
+                    <label for="nom">Nom: </label><br>
+                    <input type="text" name="nom" id="nom" required><br> <br>
+                    <label for="telephone">Numéro de telephone: </label> <br>
+                    <input type="tel" name="telephone" id="telephone" required> <br> <br>
+                    <label for="email">Email: </label><br>
+                    <input type="email" name="email" id="email" required> <br><br>
+                    <label for="adresse">Adresse de livraison: </label><br>
+                    <input type="text" name="adresse" id="adresse" required> <br> <br>
+                    <label for="preference">Préference Alimentaires</label> <br>
+                    <textarea name="preference" id="preference"></textarea><br><br>
+                    <label for="nom_utilisateur">Nom d'utilisateur: </label><br>
+                    <input type="text" name="nom_utilisateur" id="nom_utilisateur" required><br><br>
+                    <label for="mot_de_passe">Mot de passe: </label> <br>
+                    <input type="password" name="mot_de_passe" id="mot_de_passe" required> <br><br>
+                    <button type="submit">S'inscire</button>
+                </form>
+                <script>
+                    var loginLink = document.getElementById("login-link");
+                    var connexionForm = document.getElementById("connexion-form");
+                    var inscriptionForm = document.getElementById("inscription-form");
+
+                    loginLink.addEventListener("click",function(Event){
+                        event.preventDefault();
+                        connexionForm.style.display = "none";
+                        inscriptionForm.style.display = "block";
+                    })
+                </script>
+            </section>
+
+        </main>   
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">LivrEat</a>
+                    <span class="footer__description">Restaurant</span>
+                    <div>
+                        <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Services</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Excellent</a></li>
+                        <li><a href="#" class="footer__link">Fresh</a></li>
+                        <li><a href="#" class="footer__link">Rapide</a></li>
+                        <li><a href="menu.html" class="footer__link">Commander un plat</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Information</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Event</a></li>
+                        <li><a href="#" class="footer__link">Contact us</a></li>
+                        <li><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li><a href="#" class="footer__link">Terms of services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Adress</h3>
+                    <ul>
+                        <li>Yaoundé - Cameroun</li>
+                        <li>Bastos</li>
+                        <li>690 80 70 58</li>
+                        <li>livreat@email.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 2022 Coding Team. All right reserved</p>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
